@@ -1,4 +1,4 @@
-package com.singfx.app.live
+package com.singcomfy.app.live
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -34,10 +34,10 @@ import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.audio.SonicAudioProcessor
 import androidx.media3.common.util.UnstableApi
-import com.singfx.app.MainActivity
-import com.singfx.app.R
-import com.singfx.app.dsp.DspChain
-import com.singfx.app.dsp.FxState
+import com.singcomfy.app.MainActivity
+import com.singcomfy.app.R
+import com.singcomfy.app.dsp.DspChain
+import com.singcomfy.app.dsp.FxState
 import kotlinx.coroutines.flow.MutableStateFlow
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -74,7 +74,7 @@ object LiveFx {
 
     /** Whether volume buttons should be redirected to the karaoke output right now. */
     fun interceptsVolumeKeys(): Boolean =
-        com.singfx.app.dsp.FxState.liveRunning.value && route.value != null && route.value != OutputRoute.MEDIA
+        com.singcomfy.app.dsp.FxState.liveRunning.value && route.value != null && route.value != OutputRoute.MEDIA
 
     fun stop(context: Context) {
         context.startService(Intent(context, LiveFxService::class.java).setAction(LiveFxService.ACTION_STOP))
@@ -147,7 +147,7 @@ class LiveFxService : Service() {
         val ov = PendingIntent.getService(this, 2, Intent(this, LiveFxService::class.java).setAction(ACTION_TOGGLE_OVERLAY), PendingIntent.FLAG_IMMUTABLE)
         val n: Notification = NotificationCompat.Builder(this, CHANNEL)
             .setSmallIcon(R.drawable.ic_mic)
-            .setContentTitle("SingFX Live is on")
+            .setContentTitle("SingComfy Live is on")
             .setContentText("Pitch & EQ applied to audio from other apps")
             .setOngoing(true)
             .setContentIntent(open)

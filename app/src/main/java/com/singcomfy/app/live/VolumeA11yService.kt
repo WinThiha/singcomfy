@@ -1,4 +1,4 @@
-package com.singfx.app.live
+package com.singcomfy.app.live
 
 import android.accessibilityservice.AccessibilityService
 import android.content.ComponentName
@@ -10,7 +10,7 @@ import android.view.accessibility.AccessibilityEvent
 
 /**
  * Does nothing with screen content. Its only purpose is the "accessibility volume" flag, which
- * gives SingFX its own independent audio stream. Live FX plays the processed sound on that stream
+ * gives SingComfy its own independent audio stream. Live FX plays the processed sound on that stream
  * while the original media stream is muted, so you only hear the pitch-shifted / EQ'd version.
  * While Live FX is on it also turns the volume buttons into karaoke volume buttons.
  */
@@ -24,7 +24,7 @@ class VolumeA11yService : AccessibilityService() {
 
     /**
      * While Live FX runs, the original media stream is muted, so the normal volume buttons would
-     * fight with it. Instead, the buttons adjust SingFX's karaoke output directly. Only the two
+     * fight with it. Instead, the buttons adjust SingComfy's karaoke output directly. Only the two
      * volume keys are ever looked at, and only while Live FX is on; everything else passes through.
      */
     override fun onKeyEvent(event: KeyEvent): Boolean {

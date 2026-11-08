@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
@@ -61,8 +61,8 @@ import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
-import com.singfx.app.dsp.FxState
-import com.singfx.app.player.PlayerHolder
+import com.singcomfy.app.dsp.FxState
+import com.singcomfy.app.player.PlayerHolder
 
 class PlayerUiState(player: Player) {
     var isPlaying by mutableStateOf(player.isPlaying)

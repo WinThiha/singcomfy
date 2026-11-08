@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import android.content.Context
 import android.content.Intent
@@ -71,13 +71,13 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.media3.common.util.UnstableApi
-import com.singfx.app.dsp.FxState
-import com.singfx.app.live.LiveFx
-import com.singfx.app.live.LiveFxPrefs
-import com.singfx.app.live.LiveFxService
-import com.singfx.app.live.LiveStartActivity
-import com.singfx.app.live.OutputRoute
-import com.singfx.app.live.VolumeA11yService
+import com.singcomfy.app.dsp.FxState
+import com.singcomfy.app.live.LiveFx
+import com.singcomfy.app.live.LiveFxPrefs
+import com.singcomfy.app.live.LiveFxService
+import com.singcomfy.app.live.LiveStartActivity
+import com.singcomfy.app.live.OutputRoute
+import com.singcomfy.app.live.VolumeA11yService
 import kotlin.math.roundToInt
 import kotlinx.coroutines.launch
 
@@ -164,8 +164,8 @@ fun LiveScreen() {
         // ---- Header
         Row(Modifier.fillMaxWidth().padding(top = 14.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
-                Text("SingFX", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black, color = Pink)
-                Text("Change the key of any app and sing", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text("SingComfy", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black, color = Pink)
+                Text("Every song, in your key.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             if (running) Pill("KEY ${formatSemis(fx.pitchSemitones)}")
         }
@@ -250,7 +250,7 @@ fun LiveScreen() {
                     }
                 }
                 if (!a11yOk) {
-                    Text("Clean sound + volume buttons: turn on \"SingFX audio output\" in Accessibility. Sound then goes to your speaker, headphones or Bluetooth like normal, and the volume buttons control the karaoke volume.",
+                    Text("Clean sound + volume buttons: turn on \"SingComfy audio output\" in Accessibility. Sound then goes to your speaker, headphones or Bluetooth like normal, and the volume buttons control the karaoke volume.",
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
                     TextButton(onClick = { ctx.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)) }) { Text("Open Accessibility settings") }
                 }
@@ -279,7 +279,7 @@ fun LiveScreen() {
                     }
                 }
                 Text(
-                    "Auto uses the Accessibility channel when \"SingFX audio output\" is on, otherwise Alarm (which also plays on the phone speaker when headphones are connected). " +
+                    "Auto uses the Accessibility channel when \"SingComfy audio output\" is on, otherwise Alarm (which also plays on the phone speaker when headphones are connected). " +
                         "Media doesn't mute the original. Changes apply the next time Live FX starts.\n\n" +
                         "Apps that block recording (Netflix, some music apps) can't be processed. Live mode adds about 0.1 to 0.2 s of delay; the built-in player (YouTube and Library tabs) has none.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -298,15 +298,15 @@ private fun AboutRow() {
     val ctx = LocalContext.current
     val scope = androidx.compose.runtime.rememberCoroutineScope()
     var checking by remember { mutableStateOf(false) }
-    var found by remember { mutableStateOf<com.singfx.app.AppUpdate?>(null) }
-    val repoUrl = "https://github.com/${com.singfx.app.BuildConfig.GITHUB_REPO}"
-    Text("SingFX ${com.singfx.app.BuildConfig.VERSION_NAME}", fontWeight = FontWeight.SemiBold)
+    var found by remember { mutableStateOf<com.singcomfy.app.AppUpdate?>(null) }
+    val repoUrl = "https://github.com/${com.singcomfy.app.BuildConfig.GITHUB_REPO}"
+    Text("SingComfy ${com.singcomfy.app.BuildConfig.VERSION_NAME}", fontWeight = FontWeight.SemiBold)
     Text("Free and open source (GPL-3.0).", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     Row {
         TextButton(enabled = !checking, onClick = {
             checking = true
             scope.launch {
-                val u = com.singfx.app.UpdateChecker.check(ctx, force = true)
+                val u = com.singcomfy.app.UpdateChecker.check(ctx, force = true)
                 checking = false
                 if (u == null) android.widget.Toast.makeText(ctx, "You have the latest version", android.widget.Toast.LENGTH_SHORT).show()
                 found = u

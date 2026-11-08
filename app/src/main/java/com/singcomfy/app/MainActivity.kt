@@ -1,4 +1,4 @@
-package com.singfx.app
+package com.singcomfy.app
 
 import android.content.ComponentName
 import android.content.Intent
@@ -35,22 +35,22 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
-import com.singfx.app.dsp.FxState
-import com.singfx.app.player.LocalItem
-import com.singfx.app.player.PlaybackService
-import com.singfx.app.player.PlayerHolder
-import com.singfx.app.ui.Bg
-import com.singfx.app.ui.LibraryScreen
-import com.singfx.app.ui.LiveScreen
-import com.singfx.app.ui.MiniPlayer
-import com.singfx.app.ui.Pink
-import com.singfx.app.ui.PlayerScreen
-import com.singfx.app.ui.SingTheme
-import com.singfx.app.ui.Surface1
-import com.singfx.app.ui.WebHolder
-import com.singfx.app.ui.WebScreen
-import com.singfx.app.ui.YouTubeScreen
-import com.singfx.app.yt.YouTubeRepo
+import com.singcomfy.app.dsp.FxState
+import com.singcomfy.app.player.LocalItem
+import com.singcomfy.app.player.PlaybackService
+import com.singcomfy.app.player.PlayerHolder
+import com.singcomfy.app.ui.Bg
+import com.singcomfy.app.ui.LibraryScreen
+import com.singcomfy.app.ui.LiveScreen
+import com.singcomfy.app.ui.MiniPlayer
+import com.singcomfy.app.ui.Pink
+import com.singcomfy.app.ui.PlayerScreen
+import com.singcomfy.app.ui.SingTheme
+import com.singcomfy.app.ui.Surface1
+import com.singcomfy.app.ui.WebHolder
+import com.singcomfy.app.ui.WebScreen
+import com.singcomfy.app.ui.YouTubeScreen
+import com.singcomfy.app.yt.YouTubeRepo
 import kotlinx.coroutines.launch
 
 enum class Tab(val label: String, val icon: ImageVector) {
@@ -184,12 +184,12 @@ class MainActivity : ComponentActivity() {
                 }
             }
             if (showPlayer) PlayerScreen(onClose = { playerOpen.value = false })
-            busy.value?.let { com.singfx.app.ui.BusyOverlay(it) }
+            busy.value?.let { com.singcomfy.app.ui.BusyOverlay(it) }
             update.value?.let { u ->
                 androidx.compose.material3.AlertDialog(
                     onDismissRequest = { update.value = null },
                     title = { Text("Update available: ${u.version}") },
-                    text = { Text(("A new version of SingFX is on GitHub (you have ${BuildConfig.VERSION_NAME}).\n\n" + u.notes).trim()) },
+                    text = { Text(("A new version of SingComfy is on GitHub (you have ${BuildConfig.VERSION_NAME}).\n\n" + u.notes).trim()) },
                     confirmButton = {
                         androidx.compose.material3.TextButton(onClick = {
                             update.value = null

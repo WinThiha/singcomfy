@@ -1,8 +1,8 @@
-# SingFX: karaoke key changer for Android
+# SingComfy: every song, in your key
 
-Change the key of **YouTube or any app on your phone**, remove vocals and tune the EQ, then sing in your own range.
+Too high? Too low? SingComfy is a karaoke key changer for Android. It moves the key of **YouTube or any app on your phone** up or down to fit your voice, and it also removes vocals and tunes the EQ.
 
-**[⬇ Download the latest APK](https://github.com/WinThiha/singfx/releases/latest/download/SingFX.apk)** · [Website](https://winthiha.github.io/singfx/) · [Privacy policy](https://winthiha.github.io/singfx/privacy.html)
+**[⬇ Download the latest APK](https://github.com/WinThiha/singcomfy/releases/latest/download/SingComfy.apk)** · [Website](https://winthiha.github.io/singcomfy/) · [Privacy policy](https://winthiha.github.io/singcomfy/privacy.html)
 
 <p>
   <img src="docs/screenshots/home.png" width="220" alt="Home screen">
@@ -21,13 +21,13 @@ Change the key of **YouTube or any app on your phone**, remove vocals and tune t
 - **Updates itself:** checks GitHub Releases for new versions.
 
 ## Install
-1. Download [`SingFX.apk`](https://github.com/WinThiha/singfx/releases/latest/download/SingFX.apk) on your Android phone (Android 10+).
+1. Download [`SingComfy.apk`](https://github.com/WinThiha/singcomfy/releases/latest/download/SingComfy.apk) on your Android phone (Android 10+).
 2. Open it and allow "install unknown apps" if asked. If Play Protect warns about an unrecognized app, choose **Install anyway**.
-3. In SingFX, finish the setup card: allow the floating bubble, and turn on **Accessibility → SingFX audio output**. That setting gives SingFX its own audio channel and lets it use the volume buttons; it never reads your screen.
-   - If the switch is greyed out ("Restricted setting"), open **Settings → Apps → SingFX → ⋮ → Allow restricted settings** first. Android does this for apps installed from a download.
+3. In SingComfy, finish the setup card: allow the floating bubble, and turn on **Accessibility → SingComfy audio output**. That setting gives SingComfy its own audio channel and lets it use the volume buttons; it never reads your screen.
+   - If the switch is greyed out ("Restricted setting"), open **Settings → Apps → SingComfy → ⋮ → Allow restricted settings** first. Android does this for apps installed from a download.
 
 ## How Live FX works
-Android's [playback capture API](https://developer.android.com/media/platform/av-capture) delivers other apps' audio to SingFX. SingFX mutes the original media stream, runs the audio through the effects (Sonic pitch shift → vocal remover → biquad EQ → limiter), and plays the result on its own stream. With the accessibility service on, it uses the accessibility stream, which routes like normal media to the speaker, headphones or Bluetooth. Without it, SingFX falls back to the alarm stream. If the app is killed while Live FX is on, the next launch restores the media volume.
+Android's [playback capture API](https://developer.android.com/media/platform/av-capture) delivers other apps' audio to SingComfy. SingComfy mutes the original media stream, runs the audio through the effects (Sonic pitch shift → vocal remover → biquad EQ → limiter), and plays the result on its own stream. With the accessibility service on, it uses the accessibility stream, which routes like normal media to the speaker, headphones or Bluetooth. Without it, SingComfy falls back to the alarm stream. If the app is killed while Live FX is on, the next launch restores the media volume.
 
 Limits: apps that opt out of capture (Netflix, some music apps) can't be processed, and Live mode adds about 0.1–0.2 s of latency.
 
@@ -49,4 +49,4 @@ Release signing reads `keystore.properties` (git-ignored) with `storeFile`, `sto
 | `ui/` | Jetpack Compose screens |
 
 ## License
-[GPL-3.0](LICENSE). SingFX uses NewPipe Extractor, which is GPL-3.0.
+[GPL-3.0](LICENSE). SingComfy uses NewPipe Extractor, which is GPL-3.0.

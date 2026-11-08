@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -47,9 +47,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.singfx.app.yt.SearchPage
-import com.singfx.app.yt.VideoResult
-import com.singfx.app.yt.YouTubeRepo
+import com.singcomfy.app.yt.SearchPage
+import com.singcomfy.app.yt.VideoResult
+import com.singcomfy.app.yt.YouTubeRepo
 import kotlinx.coroutines.launch
 
 /** Results survive tab switches. */
@@ -123,7 +123,7 @@ fun YouTubeScreen(onPlay: (url: String, audioOnly: Boolean) -> Unit, onOpenLink:
             Column(Modifier.padding(top = 30.dp).fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("Search YouTube and sing along", fontWeight = FontWeight.Bold)
                 Spacer(Modifier.height(6.dp))
-                Text("Tip: add \"karaoke\" or \"instrumental\" to your search. You can also share a video from the YouTube app to SingFX, or use Live FX to control the YouTube app directly.",
+                Text("Tip: add \"karaoke\" or \"instrumental\" to your search. You can also share a video from the YouTube app to SingComfy, or use Live FX to control the YouTube app directly.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }

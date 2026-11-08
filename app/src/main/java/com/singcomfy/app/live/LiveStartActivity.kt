@@ -1,4 +1,4 @@
-package com.singfx.app.live
+package com.singcomfy.app.live
 
 import android.Manifest
 import android.app.Activity
@@ -35,7 +35,7 @@ class LiveStartActivity : Activity() {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "SingFX needs the audio-recording permission to process other apps' sound", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "SingComfy needs the audio-recording permission to process other apps' sound", Toast.LENGTH_LONG).show()
             finish(); return
         }
         askCapture()

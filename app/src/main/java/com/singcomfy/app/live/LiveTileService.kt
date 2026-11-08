@@ -1,4 +1,4 @@
-package com.singfx.app.live
+package com.singcomfy.app.live
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -7,7 +7,7 @@ import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import androidx.media3.common.util.UnstableApi
-import com.singfx.app.dsp.FxState
+import com.singcomfy.app.dsp.FxState
 
 /** Quick-settings tile: one tap to start/stop Live FX from anywhere. */
 @UnstableApi

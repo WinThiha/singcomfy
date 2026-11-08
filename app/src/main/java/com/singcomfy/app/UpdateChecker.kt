@@ -1,7 +1,7 @@
-package com.singfx.app
+package com.singcomfy.app
 
 import android.content.Context
-import com.singfx.app.yt.Http
+import com.singcomfy.app.yt.Http
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.Request
@@ -9,7 +9,7 @@ import org.json.JSONObject
 
 data class AppUpdate(val version: String, val pageUrl: String, val apkUrl: String?, val notes: String)
 
-/** Checks GitHub Releases for a newer SingFX version (the app isn't on a store, so it updates itself this way). */
+/** Checks GitHub Releases for a newer SingComfy version (the app isn't on a store, so it updates itself this way). */
 object UpdateChecker {
     private const val PREFS = "updates"
     private const val MIN_INTERVAL_MS = 6 * 60 * 60 * 1000L

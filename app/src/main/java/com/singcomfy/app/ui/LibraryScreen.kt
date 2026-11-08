@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import android.Manifest
 import android.content.ContentUris
@@ -58,8 +58,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.util.UnstableApi
-import com.singfx.app.player.LocalItem
-import com.singfx.app.player.PlayerHolder
+import com.singcomfy.app.player.LocalItem
+import com.singcomfy.app.player.PlayerHolder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

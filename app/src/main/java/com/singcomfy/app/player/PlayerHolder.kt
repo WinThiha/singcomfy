@@ -1,4 +1,4 @@
-package com.singfx.app.player
+package com.singcomfy.app.player
 
 import android.content.Context
 import android.net.Uri
@@ -21,8 +21,8 @@ import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.MergingMediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
-import com.singfx.app.dsp.FxState
-import com.singfx.app.yt.Http
+import com.singcomfy.app.dsp.FxState
+import com.singcomfy.app.yt.Http
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -106,7 +106,7 @@ object PlayerHolder {
 
     private fun httpFactory() = OkHttpDataSource.Factory(Http.client).setUserAgent(Http.USER_AGENT)
 
-    private fun dataSourceFactory() = DefaultDataSource.Factory(appContext, com.singfx.app.yt.YtDataSource.Factory(httpFactory()))
+    private fun dataSourceFactory() = DefaultDataSource.Factory(appContext, com.singcomfy.app.yt.YtDataSource.Factory(httpFactory()))
 
     private fun meta(title: String, artist: String?, art: String? = null) = MediaMetadata.Builder()
         .setTitle(title).setArtist(artist).apply { art?.let { setArtworkUri(Uri.parse(it)) } }.build()

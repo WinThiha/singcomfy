@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -48,10 +48,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.singfx.app.dsp.EQ_LABELS
-import com.singfx.app.dsp.EQ_PRESETS
-import com.singfx.app.dsp.FxParams
-import com.singfx.app.dsp.FxState
+import com.singcomfy.app.dsp.EQ_LABELS
+import com.singcomfy.app.dsp.EQ_PRESETS
+import com.singcomfy.app.dsp.FxParams
+import com.singcomfy.app.dsp.FxState
 import kotlin.math.abs
 import kotlin.math.roundToInt
 

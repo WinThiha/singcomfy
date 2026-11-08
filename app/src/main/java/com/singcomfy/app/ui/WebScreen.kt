@@ -1,4 +1,4 @@
-package com.singfx.app.ui
+package com.singcomfy.app.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -48,7 +48,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.singfx.app.dsp.FxState
+import com.singcomfy.app.dsp.FxState
 
 /** Keeps one WebView alive across tab switches. */
 object WebHolder {

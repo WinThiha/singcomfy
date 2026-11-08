@@ -14,16 +14,16 @@ val signingProps = Properties().apply {
 val hasReleaseKey = signingProps.getProperty("storeFile") != null && !project.hasProperty("signWithDebug")
 
 android {
-    namespace = "com.singfx.app"
+    namespace = "com.singcomfy.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.singfx.app"
+        applicationId = "com.singcomfy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
-        buildConfigField("String", "GITHUB_REPO", "\"WinThiha/singfx\"")
+        versionCode = 2
+        versionName = "1.1.0"
+        buildConfigField("String", "GITHUB_REPO", "\"WinThiha/singcomfy\"")
     }
 
     signingConfigs {
@@ -53,7 +53,7 @@ android {
     applicationVariants.all {
         outputs.all {
             (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
-                "SingFX-${versionName}-${buildType.name}.apk"
+                "SingComfy-${versionName}-${buildType.name}.apk"
         }
     }
     packaging {

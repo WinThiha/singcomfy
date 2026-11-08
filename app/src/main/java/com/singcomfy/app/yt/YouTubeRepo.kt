@@ -1,6 +1,6 @@
-package com.singfx.app.yt
+package com.singcomfy.app.yt
 
-import com.singfx.app.player.StreamItem
+import com.singcomfy.app.player.StreamItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.schabi.newpipe.extractor.MediaFormat

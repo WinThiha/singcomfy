@@ -1,12 +1,12 @@
-package com.singfx.app.player
+package com.singcomfy.app.player
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.audio.BaseAudioProcessor
 import androidx.media3.common.util.UnstableApi
-import com.singfx.app.dsp.DspChain
-import com.singfx.app.dsp.FxParams
-import com.singfx.app.dsp.FxState
+import com.singcomfy.app.dsp.DspChain
+import com.singcomfy.app.dsp.FxParams
+import com.singcomfy.app.dsp.FxState
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 

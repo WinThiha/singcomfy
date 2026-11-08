@@ -1,4 +1,4 @@
-package com.singfx.app.dsp
+package com.singcomfy.app.dsp
 
 import kotlin.math.PI
 import kotlin.math.abs

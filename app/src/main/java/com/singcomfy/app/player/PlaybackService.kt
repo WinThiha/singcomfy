@@ -1,11 +1,11 @@
-package com.singfx.app.player
+package com.singcomfy.app.player
 
 import android.app.PendingIntent
 import android.content.Intent
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
-import com.singfx.app.MainActivity
+import com.singcomfy.app.MainActivity
 
 /** Keeps playback going in the background with a media notification / lock-screen controls. */
 @UnstableApi

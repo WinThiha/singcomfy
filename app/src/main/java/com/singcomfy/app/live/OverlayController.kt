@@ -1,4 +1,4 @@
-package com.singfx.app.live
+package com.singcomfy.app.live
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -62,14 +62,14 @@ import androidx.savedstate.SavedStateRegistry
 import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
-import com.singfx.app.MainActivity
-import com.singfx.app.dsp.FxState
-import com.singfx.app.ui.FxPanel
-import com.singfx.app.ui.Pink
-import com.singfx.app.ui.SingTheme
-import com.singfx.app.ui.Surface1
-import com.singfx.app.ui.Violet
-import com.singfx.app.ui.formatSemis
+import com.singcomfy.app.MainActivity
+import com.singcomfy.app.dsp.FxState
+import com.singcomfy.app.ui.FxPanel
+import com.singcomfy.app.ui.Pink
+import com.singcomfy.app.ui.SingTheme
+import com.singcomfy.app.ui.Surface1
+import com.singcomfy.app.ui.Violet
+import com.singcomfy.app.ui.formatSemis
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
@@ -303,7 +303,7 @@ class OverlayController(private val context: Context) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(Icons.Default.Mic, null, tint = Color.White, modifier = Modifier.size(18.dp))
-                    Text(" SingFX Live", fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                    Text(" SingComfy Live", fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
                     IconButton(onClick = {
                         context.startActivity(Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtra("tab", "live"))
                         setExpanded(false)

@@ -34,7 +34,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.SingFX"
+        android:theme="@style/Theme.SingComfy"
         tools:targetApi="35">
 
         <activity
@@ -57,7 +57,7 @@
                 <data android:mimeType="audio/*" />
                 <data android:mimeType="video/*" />
             </intent-filter>
-            <!-- Share a link (e.g. from the YouTube app) to SingFX -->
+            <!-- Share a link (e.g. from the YouTube app) to SingComfy -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -70,7 +70,7 @@
             android:exported="false"
             android:excludeFromRecents="true"
             android:taskAffinity=""
-            android:theme="@style/Theme.SingFX.Transparent" />
+            android:theme="@style/Theme.SingComfy.Transparent" />
 
         <service
             android:name=".live.LiveFxService"
