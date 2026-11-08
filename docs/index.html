@@ -3,8 +3,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SingFX: Karaoke Key Changer</title>
-<meta name="description" content="Change the key of YouTube and any Android app, remove vocals and tune the EQ. Free and open source.">
+<title>SingFX: Karaoke Key Changer for YouTube & Any Android App</title>
+<meta name="description" content="Free Android karaoke app that changes the key (pitch) of YouTube and any other app, removes vocals and has a 10-band EQ. No root, no ads.">
+<link rel="canonical" href="https://winthiha.github.io/singfx/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SingFX">
+<meta property="og:title" content="SingFX: Karaoke Key Changer for YouTube on Android">
+<meta property="og:description" content="Free Android karaoke app that changes the key (pitch) of YouTube and any other app, removes vocals and has a 10-band EQ. No root, no ads.">
+<meta property="og:url" content="https://winthiha.github.io/singfx/">
+<meta property="og:image" content="https://winthiha.github.io/singfx/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SingFX: Karaoke Key Changer for YouTube on Android">
+<meta name="twitter:description" content="Free Android karaoke app that changes the key (pitch) of YouTube and any other app, removes vocals and has a 10-band EQ. No root, no ads.">
+<meta name="twitter:image" content="https://winthiha.github.io/singfx/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "SingFX",
+ "alternateName": "SingFX Karaoke Key Changer",
+ "description": "Free Android karaoke app that changes the key (pitch) of YouTube and any other app, removes vocals and has a 10-band EQ. No root, no ads.",
+ "operatingSystem": "Android 10+",
+ "applicationCategory": "MultimediaApplication",
+ "applicationSubCategory": "Karaoke",
+ "softwareVersion": "1.0.0",
+ "url": "https://winthiha.github.io/singfx/",
+ "downloadUrl": "https://github.com/WinThiha/singfx/releases/latest/download/SingFX.apk",
+ "screenshot": [
+  "https://winthiha.github.io/singfx/screenshots/home.png",
+  "https://winthiha.github.io/singfx/screenshots/live.png",
+  "https://winthiha.github.io/singfx/screenshots/panel.png"
+ ],
+ "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ },
+ "author": {
+  "@type": "Person",
+  "name": "WinThiha",
+  "url": "https://github.com/WinThiha"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I change the key of a YouTube song on Android?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Install SingFX, tap YouTube under \"Sing with\", allow the screen-share prompt, and play the song. Tap the floating bubble and use + or − to move the key up or down in half steps. The tempo stays the same."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I remove the vocals from a YouTube song?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. SingFX's vocal remover reduces the lead vocal on most studio recordings, so you can sing over the music."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does SingFX need root?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. SingFX uses Android's playback capture feature, which works on normal phones with Android 10 or newer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work with a Bluetooth karaoke speaker?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Turn on \"SingFX audio output\" in Settings → Accessibility, and the processed music plays only through your Bluetooth speaker. If the switch is greyed out, open Settings → Apps → SingFX → ⋮ → Allow restricted settings first."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which apps does it work with?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "YouTube, YouTube Music, Chrome and most other apps that play music. Apps that block audio capture, like Netflix and some music apps, can't be processed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is SingFX free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. SingFX is free and open source, with no ads and no tracking."
+   }
+  }
+ ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23ff3d8b'/%3E%3Cpath fill='white' d='M12 13.5c1.4 0 2.5-1.1 2.5-2.5V6c0-1.4-1.1-2.5-2.5-2.5S9.5 4.6 9.5 6v5c0 1.4 1.1 2.5 2.5 2.5zm4.4-2.5c0 2.5-2.1 4.2-4.4 4.2S7.6 13.5 7.6 11H6.2c0 2.8 2.3 5.2 5 5.6V19h1.6v-2.4c2.7-.4 5-2.8 5-5.6h-1.4z'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -27,6 +128,7 @@
   .logo { width: 84px; height: 84px; border-radius: 24px; background: linear-gradient(135deg, var(--pink), var(--violet)); display: inline-grid; place-items: center; box-shadow: 0 12px 40px rgba(255,61,139,.35); }
   h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 18px 0 4px; letter-spacing: -0.02em; font-weight: 900; }
   h1 span { color: var(--pink); }
+  .sub { margin: 0 0 10px; font-weight: 700; color: var(--text); font-size: 1.1rem; }
   .tag { color: var(--muted); font-size: 1.15rem; margin: 0 auto 28px; max-width: 560px; }
   .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--pink); color: #fff; text-decoration: none; font-weight: 700; padding: 14px 26px; border-radius: 999px; font-size: 1.05rem; }
   .btn:hover { filter: brightness(1.08); }
@@ -42,6 +144,9 @@
   .card p { margin: 0; color: var(--muted); font-size: .95rem; }
   ol { padding-left: 22px; } ol li { margin: 8px 0; }
   .note { background: var(--surface2); border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 10px; color: var(--muted); font-size: .95rem; }
+  details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 700; }
+  details p { color: var(--muted); margin: 10px 0 0; }
   footer { color: var(--muted); font-size: .9rem; padding: 48px 0; text-align: center; }
 </style>
 </head>
@@ -50,6 +155,7 @@
   <header>
     <div class="logo"><svg width="46" height="46" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></div>
     <h1>Sing<span>FX</span></h1>
+    <p class="sub">Karaoke key changer &amp; vocal remover for Android</p>
     <p class="tag">Change the key of YouTube, or any app on your phone, and sing karaoke in your own range. Vocal remover and EQ included.</p>
     <div class="btns">
       <a class="btn" href="https://github.com/WinThiha/singfx/releases/latest/download/SingFX.apk">
@@ -93,6 +199,14 @@
   </ol>
   <p class="note"><b>"Restricted setting" when turning on SingFX audio output?</b> Android blocks accessibility settings for apps installed from a download. Open <b>Settings → Apps → SingFX</b>, tap the <b>⋮</b> menu (top right), choose <b>Allow restricted settings</b>, then go back and turn it on. SingFX also works without it: sound then plays on the alarm channel, and the volume buttons work less smoothly.</p>
   <p class="note">Apps that block audio capture (Netflix and some music apps) can't be processed. Live FX adds a small delay of about 0.1–0.2 seconds. The built-in player has none.</p>
+
+  <h2>Questions</h2>
+  <details><summary>How do I change the key of a YouTube song on Android?</summary><p>Install SingFX, tap YouTube under "Sing with", allow the screen-share prompt, and play the song. Tap the floating bubble and use + or − to move the key up or down in half steps. The tempo stays the same.</p></details>
+  <details><summary>Can I remove the vocals from a YouTube song?</summary><p>Yes. SingFX's vocal remover reduces the lead vocal on most studio recordings, so you can sing over the music.</p></details>
+  <details><summary>Does SingFX need root?</summary><p>No. SingFX uses Android's playback capture feature, which works on normal phones with Android 10 or newer.</p></details>
+  <details><summary>Does it work with a Bluetooth karaoke speaker?</summary><p>Yes. Turn on "SingFX audio output" in Settings → Accessibility, and the processed music plays only through your Bluetooth speaker. If the switch is greyed out, open Settings → Apps → SingFX → ⋮ → Allow restricted settings first.</p></details>
+  <details><summary>Which apps does it work with?</summary><p>YouTube, YouTube Music, Chrome and most other apps that play music. Apps that block audio capture, like Netflix and some music apps, can't be processed.</p></details>
+  <details><summary>Is SingFX free?</summary><p>Yes. SingFX is free and open source, with no ads and no tracking.</p></details>
 
   <footer>
     <a href="privacy.html">Privacy policy</a> · <a href="https://github.com/WinThiha/singfx/issues">Report a problem</a> · <a href="https://github.com/WinThiha/singfx/releases">All releases</a>
