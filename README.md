@@ -48,5 +48,8 @@ Release signing reads `keystore.properties` (git-ignored) with `storeFile`, `sto
 | `yt/` | NewPipe Extractor wiring, chunked googlevideo data source |
 | `ui/` | Jetpack Compose screens |
 
+## Maintaining
+Step-by-step guides for building, releasing, the signing key, the website and Google, and fixing common problems: see [`guides/`](guides/README.md).
+
 ## License
 [GPL-3.0](LICENSE). SingComfy uses NewPipe Extractor, which is GPL-3.0.
