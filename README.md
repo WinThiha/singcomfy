@@ -24,6 +24,7 @@ Change the key of **YouTube or any app on your phone**, remove vocals and tune t
 1. Download [`SingFX.apk`](https://github.com/WinThiha/singfx/releases/latest/download/SingFX.apk) on your Android phone (Android 10+).
 2. Open it and allow "install unknown apps" if asked. If Play Protect warns about an unrecognized app, choose **Install anyway**.
 3. In SingFX, finish the setup card: allow the floating bubble, and turn on **Accessibility → SingFX audio output**. That setting gives SingFX its own audio channel and lets it use the volume buttons; it never reads your screen.
+   - If the switch is greyed out ("Restricted setting"), open **Settings → Apps → SingFX → ⋮ → Allow restricted settings** first. Android does this for apps installed from a download.
 
 ## How Live FX works
 Android's [playback capture API](https://developer.android.com/media/platform/av-capture) delivers other apps' audio to SingFX. SingFX mutes the original media stream, runs the audio through the effects (Sonic pitch shift → vocal remover → biquad EQ → limiter), and plays the result on its own stream. With the accessibility service on, it uses the accessibility stream, which routes like normal media to the speaker, headphones or Bluetooth. Without it, SingFX falls back to the alarm stream. If the app is killed while Live FX is on, the next launch restores the media volume.
