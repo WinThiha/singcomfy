@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SingFX</string>
+    <string name="a11y_label">SingFX audio output</string>
+    <string name="a11y_desc">Gives SingFX Live its own audio channel so the original sound from YouTube and other apps is muted while you hear the pitch-shifted, EQ-adjusted version. While Live FX is on, the volume buttons control the karaoke volume. It only looks at the volume buttons, never reads your screen or what you type, and collects no data.</string>
+    <string name="tile_label">SingFX Live</string>
+</resources>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SingFX Privacy Policy</title>
+<style>
+  :root { --bg:#0e0b16; --surface:#1a1526; --text:#f2eef8; --muted:#b7aecb; --pink:#ff3d8b; --border:#3a3050; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg:#faf7fd; --surface:#fff; --text:#1b1426; --muted:#5d5470; --border:#e2d8ee; } }
+  :root[data-theme="light"] { --bg:#faf7fd; --surface:#fff; --text:#1b1426; --muted:#5d5470; --border:#e2d8ee; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
+  a { color:var(--pink); }
+  h1 { margin-bottom:4px; } .muted { color:var(--muted); }
+  h2 { margin-top:32px; font-size:1.25rem; }
+  li { margin:6px 0; }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  td, th { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:var(--surface); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p><a href="./">← SingFX</a></p>
+  <h1>Privacy policy</h1>
+  <p class="muted">SingFX for Android · Last updated: November 8, 2026</p>
+
+  <p>SingFX is a free, open-source karaoke app. <b>It does not collect, store or share any personal data.</b> It has no accounts, no ads, no analytics and no tracking. All audio processing happens on your phone.</p>
+
+  <h2>Audio from other apps (Live FX)</h2>
+  <p>When you turn on Live FX, Android asks you to allow screen capture. SingFX uses this permission <b>only for audio playback capture</b>. It processes the sound other apps are playing (key change, vocal remover, EQ) and plays it back right away. The audio is never recorded, saved, or sent anywhere, and SingFX never captures your screen image. Live FX stops when you tap Stop, and Android shows a status-bar icon while it runs.</p>
+
+  <h2>Permissions and why they're needed</h2>
+  <table>
+    <tr><th>Permission</th><th>Used for</th></tr>
+    <tr><td>Record audio / screen capture</td><td>Required by Android for Live FX to process other apps' audio. Your microphone is never used.</td></tr>
+    <tr><td>Music and video access</td><td>Shows songs and videos stored on your phone in the Library tab.</td></tr>
+    <tr><td>Display over other apps</td><td>The floating bubble with the key and EQ controls.</td></tr>
+    <tr><td>Accessibility service ("SingFX audio output", optional)</td><td>Gives SingFX its own audio channel, so the original sound is muted while you hear the processed version. While Live FX is on, it also turns the volume buttons into karaoke volume buttons. It only reacts to the volume up/down buttons, does not read screen content or what you type, and collects nothing.</td></tr>
+    <tr><td>Notifications</td><td>The "Live FX is on" and media playback notifications.</td></tr>
+    <tr><td>Internet</td><td>YouTube search and playback in the YouTube tab, the built-in web browser, and checking GitHub for app updates.</td></tr>
+  </table>
+
+  <h2>Network connections</h2>
+  <ul>
+    <li><b>YouTube:</b> When you use the YouTube tab, the app connects to YouTube to search and stream videos, like a web browser would. YouTube's own privacy policy applies to those requests.</li>
+    <li><b>Websites:</b> The Web tab is a normal browser. Sites you visit may set cookies, as in any browser.</li>
+    <li><b>Update check:</b> At most a few times a day, SingFX asks the GitHub API (api.github.com) whether a newer version exists. No personal information is sent.</li>
+  </ul>
+
+  <h2>Data stored on your phone</h2>
+  <p>Your effect settings (key, EQ, vocal remover, volume) are saved in the app's private storage on your phone so they persist between sessions. Uninstalling the app deletes them.</p>
+
+  <h2>Children</h2>
+  <p>SingFX collects no data from anyone, including children.</p>
+
+  <h2>Changes and contact</h2>
+  <p>Changes to this policy will be posted on this page. Questions? Open an issue at <a href="https://github.com/WinThiha/singfx/issues">github.com/WinThiha/singfx/issues</a>.</p>
+</div>
+</body>
+</html>
